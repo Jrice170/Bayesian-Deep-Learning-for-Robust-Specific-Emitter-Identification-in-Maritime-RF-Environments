@@ -1,0 +1,23 @@
+\begin{table}[!htbp]
+\centering
+\caption{Predictive entropy split into aleatoric and epistemic parts, on trained conditions and on the fully held-out cell. The point estimates are absent because a single set of weights has no epistemic term to measure.}
+\label{tab:uncertainty}
+\small
+\begin{tabular}{llrrrr}
+\toprule
+Method & Conditions & Total & Aleatoric & Epistemic & Wrong / right \\
+\midrule
+MC dropout & trained & 0.302 & 0.226 & 0.076 & 2.15 \\
+MC dropout & held out & 1.654 & 1.310 & 0.344 & 1.02 \\
+\addlinespace
+Gaussian VI & trained & 0.285 & 0.229 & 0.056 & 3.09 \\
+Gaussian VI & held out & 1.547 & 1.193 & 0.353 & 1.05 \\
+\addlinespace
+Concrete VI ($d{=}1$) & trained & 0.165 & 0.151 & 0.013 & 5.90 \\
+Concrete VI ($d{=}1$) & held out & 1.127 & 0.965 & 0.162 & 1.02 \\
+\addlinespace
+Concrete VI ($d{=}10$) & trained & 0.357 & 0.269 & 0.088 & 2.00 \\
+Concrete VI ($d{=}10$) & held out & 1.804 & 1.409 & 0.396 & 0.99 \\
+\bottomrule
+\end{tabular}
+\end{table}

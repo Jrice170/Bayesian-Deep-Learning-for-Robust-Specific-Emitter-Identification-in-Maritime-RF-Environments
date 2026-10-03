@@ -1,0 +1,31 @@
+# The WiSig download and everything derived from it. Large, and all of it
+# regenerates from the commands in the README.
+data/
+
+# Training outputs: results JSON, prediction dumps, checkpoints.
+results/
+
+# LaTeX build products
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.synctex.gz
+paper/*.fdb_latexmk
+paper/*.fls
+
+# Overleaf upload bundles, regenerated on demand
+*_overleaf.zip
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

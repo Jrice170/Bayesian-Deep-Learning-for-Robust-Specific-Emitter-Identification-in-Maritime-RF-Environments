@@ -1,0 +1,39 @@
+\begin{table}[!htbp]
+\centering
+\caption{Accuracy and expected calibration error across every test split and sea-state tier, averaged over five seeds. The dynamic tier and the listed conditions were withheld from training. Seed-to-seed variation is omitted here for width and is shown as error bars in Figure~\ref{fig:ece-methods}.}
+\label{tab:bayes-results}
+\footnotesize
+\begin{tabular}{llrrrrrr}
+\toprule
+Held out & Sea state & MLE & MAP & MC drop & Gauss VI & Conc $d{=}1$ & Conc $d{=}10$ \\
+\midrule
+\multicolumn{7}{l}{\emph{Accuracy}} \\
+nothing held out & controlled & 0.946 & 0.945 & 0.945 & 0.941 & 0.944 & 0.948 \\
+nothing held out & degraded & 0.867 & 0.871 & 0.872 & 0.851 & 0.854 & 0.841 \\
+nothing held out & dynamic & 0.208 & 0.230 & 0.233 & 0.231 & 0.203 & 0.175 \\
+receiver & controlled & 0.581 & 0.533 & 0.550 & 0.540 & 0.567 & 0.413 \\
+receiver & degraded & 0.543 & 0.534 & 0.546 & 0.525 & 0.508 & 0.352 \\
+receiver & dynamic & 0.173 & 0.197 & 0.187 & 0.193 & 0.170 & 0.126 \\
+capture day & controlled & 0.801 & 0.810 & 0.805 & 0.802 & 0.787 & 0.770 \\
+capture day & degraded & 0.720 & 0.724 & 0.726 & 0.709 & 0.691 & 0.637 \\
+capture day & dynamic & 0.197 & 0.213 & 0.218 & 0.213 & 0.189 & 0.156 \\
+receiver \& day & controlled & 0.574 & 0.489 & 0.510 & 0.479 & 0.520 & 0.416 \\
+receiver \& day & degraded & 0.499 & 0.496 & 0.502 & 0.444 & 0.443 & 0.323 \\
+receiver \& day & dynamic & 0.171 & 0.187 & 0.185 & 0.193 & 0.165 & 0.123 \\
+\midrule
+\multicolumn{7}{l}{\emph{Calibration error}} \\
+nothing held out & controlled & 0.007 & 0.009 & 0.043 & 0.040 & 0.012 & 0.056 \\
+nothing held out & degraded & 0.018 & 0.016 & 0.094 & 0.060 & 0.015 & 0.137 \\
+nothing held out & dynamic & 0.382 & 0.265 & 0.170 & 0.190 & 0.369 & 0.169 \\
+receiver & controlled & 0.315 & 0.342 & 0.222 & 0.268 & 0.263 & 0.237 \\
+receiver & degraded & 0.282 & 0.270 & 0.144 & 0.211 & 0.274 & 0.201 \\
+receiver & dynamic & 0.417 & 0.303 & 0.209 & 0.236 & 0.408 & 0.226 \\
+capture day & controlled & 0.109 & 0.090 & 0.025 & 0.031 & 0.093 & 0.031 \\
+capture day & degraded & 0.122 & 0.099 & 0.028 & 0.039 & 0.113 & 0.028 \\
+capture day & dynamic & 0.391 & 0.280 & 0.182 & 0.205 & 0.383 & 0.188 \\
+receiver \& day & controlled & 0.327 & 0.406 & 0.258 & 0.282 & 0.299 & 0.232 \\
+receiver \& day & degraded & 0.333 & 0.309 & 0.187 & 0.289 & 0.331 & 0.217 \\
+receiver \& day & dynamic & 0.432 & 0.323 & 0.221 & 0.236 & 0.421 & 0.227 \\
+\bottomrule
+\end{tabular}
+\end{table}

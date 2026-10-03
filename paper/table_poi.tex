@@ -1,0 +1,16 @@
+\begin{table}[!htbp]
+\centering
+\caption{Probability of identification by sea-state tier, with the signal-to-noise range each tier spans. The receiver and capture day are familiar throughout, so severity is the only quantity varying down the table. Chance is $0.100$ for ten emitters. The Dynamic tier was withheld from training.}
+\label{tab:poi}
+\footnotesize
+\begin{tabular}{llrrrrrr}
+\toprule
+Sea state & SNR (dB) & MLE & MAP & MC drop & Gauss VI & Conc $d{=}1$ & Conc $d{=}10$ \\
+\midrule
+controlled & $+15$ to $+25$ & 0.946 & 0.945 & 0.945 & 0.941 & 0.944 & 0.948 \\
+degraded & $+5$ to $+15$ & 0.867 & 0.871 & 0.872 & 0.851 & 0.854 & 0.841 \\
+dynamic$^{\dagger}$ & $-5$ to $0$ & 0.208 & 0.230 & 0.233 & 0.231 & 0.203 & 0.175 \\
+\bottomrule
+\end{tabular}
+\\[2pt]\footnotesize $^{\dagger}$withheld from training.
+\end{table}

@@ -1,0 +1,21 @@
+\begin{tabular}{llrr}
+\toprule
+Layer & Configuration & Output shape & Parameters \\
+\midrule
+Input & spectrogram, 3 channels & 3 x 64 x 13 & -- \\
+Conv2d + ReLU & 32 filters, 3x3, pad 1 & 32 x 64 x 13 & 896 \\
+MaxPool2d & 2x2 & 32 x 32 x 6 & -- \\
+Dropout & p = 0.15 & 32 x 32 x 6 & -- \\
+Conv2d + ReLU & 48 filters, 3x3, pad 1 & 48 x 32 x 6 & 13{,}872 \\
+MaxPool2d & 2x2 & 48 x 16 x 3 & -- \\
+Dropout & p = 0.15 & 48 x 16 x 3 & -- \\
+Conv2d + ReLU & 96 filters, 3x3, pad 1 & 96 x 16 x 3 & 41{,}568 \\
+AdaptiveAvgPool2d & output 4x2 & 96 x 4 x 2 & -- \\
+Flatten & -- & 768 & -- \\
+Linear + ReLU & 128 units & 128 & 98{,}432 \\
+Dropout & p = 0.3 & 128 & -- \\
+Linear & 10 logits & 10 & 1{,}290 \\
+\midrule
+\textbf{Total} & & & \textbf{156{,}058} \\
+\bottomrule
+\end{tabular}
