@@ -1,7 +1,7 @@
 # Specific Emitter Identification under Maritime Channel Distortion
 
-Joseph M. Rice, LTJG, USN
-CS 4323, Naval Postgraduate School
+Joseph M. Rice
+
 
 Every radio has manufacturing imperfections that show up in the signal it
 transmits. They are hard to fake, which makes them useful for identifying a
